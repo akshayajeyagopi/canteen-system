@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Event Ordering - Campus Canteen</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="guest.css">
+</head>
+
+<body>
+
+    <nav class="navbar guest-navbar">
+
+        <div class="guest-nav-container">
+
+            <a href="index.html" class="guest-logo">
+                Campus Canteen
+            </a>
+
+            <div class="guest-nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="orders.html">
+                    My Orders
+                </a>
+
+                <a href="complaints.html">
+                    Complaints
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+            </div>
+
+            <a href="login.html" class="guest-login">
+                Login
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <main class="guest-container">
+
+        <section class="guest-hero">
+
+            <div class="guest-badge">
+                EVENT ORDERING
+            </div>
+
+            <h1>
+                Order Food for Your Event
+            </h1>
+
+            <p>
+                Enter the event code provided by the college
+                to access the event-specific canteen menu.
+            </p>
+
+        </section>
+
+
+        <section class="event-access-card">
+
+            <div class="event-card-header">
+
+                <h2>
+                    Enter Event Code
+                </h2>
+
+                <p>
+                    Use the code given by the event organizers.
+                </p>
+
+            </div>
+
+
+            <form id="eventCodeForm">
+
+                <div class="event-code-input">
+
+                    <label for="eventCode">
+                        Event Code
+                    </label>
+
+                    <input
+                        type="text"
+                        id="eventCode"
+                        placeholder="Example: X7KQ2M"
+                        maxlength="6"
+                        required>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="verify-event-btn">
+
+                    Verify Event
+
+                </button>
+
+            </form>
+
+
+            <div
+                id="eventError"
+                class="event-error">
+            </div>
+
+        </section>
+
+
+        <section
+            id="verifiedEvent"
+            class="verified-event hidden">
+
+            <div class="verified-header">
+
+                <div>
+
+                    <span class="verified-label">
+                        EVENT VERIFIED
+                    </span>
+
+                    <h2 id="verifiedEventName">
+                    </h2>
+
+                </div>
+
+                <span class="verified-status">
+                    Active
+                </span>
+
+            </div>
+
+
+            <div class="verified-info">
+
+                <div class="verified-info-item">
+
+                    <span>
+                        Date
+                    </span>
+
+                    <strong id="verifiedEventDate">
+                    </strong>
+
+                </div>
+
+
+                <div class="verified-info-item">
+
+                    <span>
+                        Venue
+                    </span>
+
+                    <strong id="verifiedEventVenue">
+                    </strong>
+
+                </div>
+
+
+                <div class="verified-info-item">
+
+                    <span>
+                        Guest Ordering
+                    </span>
+
+                    <strong>
+                        Enabled
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <p
+                id="verifiedEventDescription"
+                class="verified-description">
+            </p>
+
+
+            <button
+                id="continueEventBtn"
+                class="continue-event-btn">
+
+                Continue to Event Menu
+
+            </button>
+
+        </section>
+
+
+        <section class="event-help">
+
+            <h3>
+                How does event ordering work?
+            </h3>
+
+            <div class="event-steps">
+
+                <div class="event-step">
+
+                    <span class="step-number">
+                        1
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Get the Event Code
+                        </strong>
+
+                        <p>
+                            Ask the event organizer for
+                            the canteen event code.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="event-step">
+
+                    <span class="step-number">
+                        2
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Verify the Event
+                        </strong>
+
+                        <p>
+                            Enter the code and verify
+                            the registered event.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="event-step">
+
+                    <span class="step-number">
+                        3
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Place Your Order
+                        </strong>
+
+                        <p>
+                            Select food from the event menu
+                            and choose your pickup time.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <p>
+            &copy; 2026 Campus Canteen. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="guest.js"></script>
+
+</body>
+
+</html>
